@@ -12,14 +12,12 @@ $ cd angular-rails-heroku-example
 $ bundle install
 $ rake db:create && rake db:migrate
 $ npm install
-
 ```
 
 ## Run it localy
 
 ```
 $ cd client && gulp serve:full-stack
-
 ```
 
 ## Deploy to heroku
@@ -31,7 +29,7 @@ $ heroku buildpacks:set https://github.com/heroku/heroku-buildpack-ruby
 $ heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-nodejs
 $ heroku config:set NODE_ENV=production
 $ git push heroku master
-
+$ heroku run rake db:migrate
 ```
 ## Test rails backend
 To test rails backend go to
@@ -50,9 +48,7 @@ you should see call to article (http://localhost:9000/api/v1/articles)
 To see logs from heroku
 
 ```
-
 $ heroku logs --tail
 $ heroku addons:create papertrail
 $ heroku addons:open papertrail
-
 ```
