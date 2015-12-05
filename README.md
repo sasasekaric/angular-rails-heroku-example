@@ -7,8 +7,8 @@
 ## Get the code and bootstrap the App
 
 ```
-$ git clone https://sasasekaric@bitbucket.org/sasasekaric/angularrailsstarterapp.git
-$ cd angularrailsstarterapp
+$ git clone https://github.com/sasasekaric/angular-rails-heroku-example.git
+$ cd angular-rails-heroku-example
 $ bundle install
 $ rake db:create && rake db:migrate
 $ npm install
